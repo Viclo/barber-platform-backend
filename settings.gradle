@@ -1,1 +1,8 @@
 rootProject.name = 'barber'
+
+include 'application'
+include 'config'
+include 'addressvalidator'
+include 'persistence'
+include 'web'
+

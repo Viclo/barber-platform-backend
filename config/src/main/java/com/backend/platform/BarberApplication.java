@@ -1,4 +1,4 @@
-package com.backend.platform.barber;
+package com.backend.platform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BarberApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BarberApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(BarberApplication.class, args);
+  }
 
 }

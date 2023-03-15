@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.4'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.backend.platform'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework:spring-web:6.0.6'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc:3.0.4'
+    implementation 'org.postgresql:postgresql:42.5.4'
+
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+
+    implementation project(':application')
+    implementation project(':addressvalidator')
+    implementation project(':persistence')
+    implementation project(':web')
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
