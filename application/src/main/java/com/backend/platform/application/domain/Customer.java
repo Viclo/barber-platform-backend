@@ -1,7 +1,7 @@
 package com.backend.platform.application.domain;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.UUID;
 import lombok.Getter;
 
@@ -13,19 +13,17 @@ public class Customer {
   private final String lastName;
   private final String gender;
   private final String hashedPassword;
-  private final LocalDate birthDate;
-  private final LocalDateTime createdAt;
-  private final LocalDateTime updatedAt;
+  private final int age;
+  private final LocalDate birthdate;
 
-  private Customer(UUID id, String firstName, String lastName, String gender, String hashedPassword, LocalDate birthDate) {
+  private Customer(UUID id, String firstName, String lastName, String gender, String hashedPassword, LocalDate birthdate) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.gender = gender;
     this.hashedPassword = hashedPassword;
-    this.birthDate = birthDate;
-    createdAt = LocalDateTime.now();
-    updatedAt = LocalDateTime.now();
+    this.age = Period.between(birthdate, LocalDate.now()).getYears();
+    this.birthdate = birthdate;
   }
 
   public static Customer newCustomer(String firstName, String lastName, String gender, String hashedPassword, LocalDate birthDate) {

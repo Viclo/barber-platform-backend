@@ -5,5 +5,5 @@ import java.util.UUID;
 
 public interface LoadCustomerPort {
 
-  Customer findById(UUID uuid);
+  Customer findById(UUID id);
 }

@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public record RegisterCustomerCommand(
     @NotEmpty String firstname,
     @NotEmpty String lastname,
-    @Past String gender,
+    @NotEmpty String gender,
     @SecurePassword String clearPassword,
-    @NotEmpty LocalDate birthDate
+    @Past LocalDate birthDate
     ) {}
