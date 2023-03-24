@@ -1,6 +1,7 @@
 package com.backend.platform.web.controller.customer;
 
 import com.backend.platform.application.port.in.customer.RegisterCustomerUseCase;
+import com.backend.platform.common.Adapter;
 import com.backend.platform.web.dto.request.customer.RegisterCustomerRequest;
 import com.backend.platform.web.mapper.customer.RegisterCustomerWebMapper;
 import io.swagger.v3.oas.annotations.Operation;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@Adapter
 @RestController
 @RequiredArgsConstructor
 public class RegisterCustomerController {

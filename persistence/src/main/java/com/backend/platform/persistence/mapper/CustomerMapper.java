@@ -24,8 +24,8 @@ public interface CustomerMapper {
   default CustomerEntity toDbEntity(Customer customer) {
     return new CustomerEntity(
         customer.getId(),
-        customer.getFirstName(),
-        customer.getLastName(),
+        customer.getFirstname(),
+        customer.getLastname(),
         customer.getGender(),
         customer.getHashedPassword(),
         customer.getBirthdate(),

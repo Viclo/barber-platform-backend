@@ -1,6 +1,7 @@
 package com.backend.platform.web.controller.customer;
 
 import com.backend.platform.application.port.in.customer.QueryAllCustomersCRUD;
+import com.backend.platform.common.Adapter;
 import com.backend.platform.web.dto.response.customer.CustomerResponse;
 import com.backend.platform.web.mapper.customer.CustomerWebMapper;
 import io.swagger.v3.oas.annotations.Operation;
@@ -14,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+@Adapter
 @RestController
 @RequiredArgsConstructor
 public class CustomerCRUDController {
